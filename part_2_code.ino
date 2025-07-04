@@ -20,12 +20,12 @@ void loop() {
   outVolt=(5./1023.)*readVal;
   Serial.println(outVolt);
   
-  if (outVolt<=1){
+  if (outVolt<=3){
     digitalWrite(redPin,LOW);
     digitalWrite(bluePin,LOW);
     analogWrite(greenPin,50);
   }
-  else if (outVolt<=3){
+  else if (outVolt<=1){
     digitalWrite(redPin,LOW);
     analogWrite(greenPin,0);
     digitalWrite(bluePin,HIGH);
